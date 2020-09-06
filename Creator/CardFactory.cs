@@ -9,8 +9,8 @@ namespace FactoryMethodDesignPattern.Creator
     /// <summary>  
     /// The 'Creator' Abstract Class  
     /// </summary>  
-    abstract class CardFactory
+    interface CardFactory
     {
-        public abstract CreditCard GetCreditCard();
+        CreditCard GetCreditCard();
     }
 }

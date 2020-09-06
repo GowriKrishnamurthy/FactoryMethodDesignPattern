@@ -11,19 +11,17 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
         /// <summary>  
         /// A 'ConcreteProduct' class  
         /// </summary>
-        private readonly int _creditLimit;
-        private readonly int _annualCharge;
-        private readonly string _cardType;
+        public string CardType { get; }
 
-        public override string CardType { get; }
-        public override int CreditLimit { get; set; }
-        public override int AnnualCharge { get; set; }
+        public int CreditLimit { get; set; }
+
+        public int AnnualCharge { get; set; }
 
         public MoneyBackCreditCard(int creditLimit, int annualCharge)
         {
-            _cardType = "MoneyBack";
-            _creditLimit = creditLimit;
-            _annualCharge = annualCharge; 
+            CardType = "MoneyBack";
+            CreditLimit = creditLimit;
+            AnnualCharge = annualCharge;
         }
     }
 }

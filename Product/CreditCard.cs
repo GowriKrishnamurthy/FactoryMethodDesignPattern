@@ -9,11 +9,11 @@ namespace FactoryMethodDesignPattern
     /// <summary>  
     /// The 'Product' Abstract Class  
     /// </summary>  
-    abstract class CreditCard
+    interface CreditCard
     {
-        public abstract string CardType { get; }
-        public abstract int CreditLimit { get; set; }
-        public abstract int AnnualCharge { get; set; }
+        string CardType { get; }
+        int CreditLimit { get; set; }
+        int AnnualCharge { get; set; }
     }
 
 }

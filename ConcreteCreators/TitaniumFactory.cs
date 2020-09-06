@@ -21,7 +21,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
             _annualCharge = annualCharge;
         }
 
-        public override CreditCard GetCreditCard()
+        public CreditCard GetCreditCard()
         {
             return new TitaniumCreditCard(_creditLimit, _annualCharge);
         }

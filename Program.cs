@@ -36,10 +36,15 @@ namespace FactoryMethodDesignPattern
                         break;
                 }
             }
-            ICreditCard creditCard = factory.GetCreditCard();
-            Console.WriteLine($"\n Your card details are : \n");
-            Console.WriteLine("Card Type: {0}\nCredit Limit: {1}\nAnnual Charge: {2}",
-                creditCard.CardType, creditCard.CreditLimit, creditCard.AnnualCharge);
+
+            if (factory != null)
+            {
+                ICreditCard creditCard = factory.GetCreditCard();
+                Console.WriteLine($"\n Your card details are : \n");
+                Console.WriteLine("Card Type: {0}\nCredit Limit: {1}\nAnnual Charge: {2}",
+                    creditCard.CardType, creditCard.CreditLimit, creditCard.AnnualCharge);
+            }
+
             Console.ReadKey();
         }
     }

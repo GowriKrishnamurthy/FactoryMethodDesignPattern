@@ -12,8 +12,8 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
     /// </summary>  
     class MoneyBackFactory : ICardFactory
     {
-        private int _creditLimit;
-        private int _annualCharge;
+        private readonly int _creditLimit;
+        private readonly int _annualCharge;
 
         public MoneyBackFactory(int creditLimit, int annualCharge)
         {

@@ -11,16 +11,17 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
         /// <summary>  
         /// A 'ConcreteProduct' class  
         /// </summary>
-        public string CardType { get; } = "MoneyBack";
-
-        public int CreditLimit { get; set; }
-
-        public int AnnualCharge { get; set; }
 
         public MoneyBackCreditCard(int creditLimit, int annualCharge)
         {
             CreditLimit = creditLimit;
             AnnualCharge = annualCharge;
         }
+
+        public string CardType { get; } = "MoneyBack";
+
+        public int CreditLimit { get; set; }
+
+        public int AnnualCharge { get; set; }
     }
 }

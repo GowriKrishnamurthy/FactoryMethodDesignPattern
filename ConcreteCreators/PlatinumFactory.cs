@@ -12,8 +12,8 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
     /// </summary>  
     class PlatinumFactory : ICardFactory
     {
-        private int _creditLimit;
-        private int _annualCharge;
+        private readonly int _creditLimit;
+        private readonly int _annualCharge;
 
         public PlatinumFactory(int creditLimit, int annualCharge)
         {

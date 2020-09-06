@@ -10,7 +10,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
     /// <summary>  
     /// A 'ConcreteCreator' class  
     /// </summary>  
-    class TitaniumFactory : CardFactory
+    class TitaniumFactory : ICardFactory
     {
         private int _creditLimit;
         private int _annualCharge;
@@ -21,7 +21,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
             _annualCharge = annualCharge;
         }
 
-        public CreditCard GetCreditCard()
+        public ICreditCard GetCreditCard()
         {
             return new TitaniumCreditCard(_creditLimit, _annualCharge);
         }

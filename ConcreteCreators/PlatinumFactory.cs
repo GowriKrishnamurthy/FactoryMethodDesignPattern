@@ -10,7 +10,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
     /// <summary>  
     /// A 'ConcreteCreator' class  
     /// </summary>  
-    class PlatinumFactory : CardFactory
+    class PlatinumFactory : ICardFactory
     {
         private int _creditLimit;
         private int _annualCharge;
@@ -21,7 +21,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
             _annualCharge = annualCharge;
         }
 
-        public CreditCard GetCreditCard()
+        public ICreditCard GetCreditCard()
         {
             return new PlatinumCreditCard(_creditLimit, _annualCharge);
         }

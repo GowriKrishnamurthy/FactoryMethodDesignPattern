@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace FactoryMethodDesignPattern.ConcreteCreators
 {
-    class MoneyBackCreditCard: CreditCard
+    class MoneyBackCreditCard: ICreditCard
     {
         /// <summary>  
         /// A 'ConcreteProduct' class  
         /// </summary>
-        public string CardType { get; }
+        public string CardType { get; } = "MoneyBack";
 
         public int CreditLimit { get; set; }
 
@@ -19,7 +19,6 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
 
         public MoneyBackCreditCard(int creditLimit, int annualCharge)
         {
-            CardType = "MoneyBack";
             CreditLimit = creditLimit;
             AnnualCharge = annualCharge;
         }

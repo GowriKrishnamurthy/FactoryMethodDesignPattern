@@ -9,8 +9,8 @@ namespace FactoryMethodDesignPattern.Creator
     /// <summary>  
     /// The 'Creator' Abstract Class  
     /// </summary>  
-    interface CardFactory
+    interface ICardFactory
     {
-        CreditCard GetCreditCard();
+        ICreditCard GetCreditCard();
     }
 }

@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace FactoryMethodDesignPattern.ConcreteCreators
 {
-    class PlatinumCreditCard : CreditCard
+    class PlatinumCreditCard : ICreditCard
     {
         public PlatinumCreditCard(int creditLimit, int annualCharge)
         {
-            CardType = "Platinum";
             CreditLimit = creditLimit;
             AnnualCharge = annualCharge;
         }
 
-        public string CardType { get; }
+        public string CardType { get; } = "Platinum";
 
         public int CreditLimit { get; set; }
 

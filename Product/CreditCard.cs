@@ -9,7 +9,7 @@ namespace FactoryMethodDesignPattern
     /// <summary>  
     /// The 'Product' Abstract Class  
     /// </summary>  
-    interface CreditCard
+    interface ICreditCard
     {
         string CardType { get; }
         int CreditLimit { get; set; }

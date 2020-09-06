@@ -10,7 +10,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
     /// <summary>  
     /// A 'ConcreteCreator' class  
     /// </summary>  
-    class MoneyBackFactory : CardFactory
+    class MoneyBackFactory : ICardFactory
     {
         private int _creditLimit;
         private int _annualCharge;
@@ -21,7 +21,7 @@ namespace FactoryMethodDesignPattern.ConcreteCreators
             _annualCharge = annualCharge;
         }
 
-        public  CreditCard GetCreditCard()
+        public  ICreditCard GetCreditCard()
         {
             return new MoneyBackCreditCard(_creditLimit, _annualCharge);
         }
